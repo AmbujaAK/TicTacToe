@@ -1,5 +1,7 @@
 package com.example.andy.tictactoe;
 
+import android.graphics.Color;
+import android.support.annotation.ColorRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     int c[][];
     int i,j;
     AI ai;
+    Button newButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.tvButton);
 
-
+        newButton = (Button) findViewById(R.id.btNew);
         box[1][1] = (Button) findViewById(R.id.btOne);
         box[1][2] = (Button) findViewById(R.id.btTwo);
         box[1][3] = (Button) findViewById(R.id.btThree);
@@ -170,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
                 || (c[3][1] == 0 && c[3][2] == 0 && c[3][3] == 0)
                 || (c[1][1] == 0 && c[2][1] == 0 && c[3][1] == 0)) {
             textView.setText("You won!");
+            textView.setBackgroundColor(Color.GREEN);
+            textView.setVisibility(View.VISIBLE);
             gameOver = true;
         } else if ((c[1][1] == 1 && c[2][2] == 1 && c[3][3] == 1)
                 || (c[1][3] == 1 && c[2][2] == 1 && c[3][1] == 1)
@@ -180,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
                 || (c[3][1] == 1 && c[3][2] == 1 && c[3][3] == 1)
                 || (c[1][1] == 1 && c[2][1] == 1 && c[3][1] == 1)) {
             textView.setText("You lost!, Try Again!");
+            textView.setBackgroundColor(Color.RED);
+            textView.setVisibility(View.VISIBLE);
             gameOver = true;
         } else {
             boolean empty = false;
@@ -193,9 +200,23 @@ public class MainActivity extends AppCompatActivity {
             }
             if(!empty) {
                 gameOver = true;
-                textView.setText("Game over. It's a draw!");
+                textView.setText("It's a draw!");
+                textView.setBackgroundColor(Color.YELLOW);
+                textView.setTextColor(Color.BLACK);
+                textView.setVisibility(View.VISIBLE);
             }
         }
         return gameOver;
+    }
+
+    public void newBoard(View view) {
+        //this.newButton = newButton;
+        newButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setBoard();
+                textView.setVisibility(View.GONE);
+            }
+        });
     }
 }

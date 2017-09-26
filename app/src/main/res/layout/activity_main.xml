@@ -18,25 +18,25 @@
         <Button
             android:id="@+id/btOne"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btTwo"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btThree"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -48,25 +48,25 @@
         <Button
             android:id="@+id/btFour"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btFive"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btSix"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -78,25 +78,25 @@
         <Button
             android:id="@+id/btSeven"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btEight"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/btNine"
             android:layout_width="0dp"
-            android:hint="-"
+            android:hint=" "
             android:textColor="@android:color/black"
-            android:textSize="70sp"
+            android:textSize="60sp"
             android:layout_height="100dp"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -109,9 +109,18 @@
         android:textColor="@android:color/white"
         android:text="Start"
         android:background="#6C7A89"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginTop="20dp"
-        android:onClick="Start"/>
+        android:onClick="Start"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New"
+        android:textColor="@color/colorAccent"
+        android:onClick="newBoard"/>
 </LinearLayout>
