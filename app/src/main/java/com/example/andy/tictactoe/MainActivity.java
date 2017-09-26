@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 || (c[2][1] == 0 && c[2][2] == 0 && c[2][3] == 0)
                 || (c[3][1] == 0 && c[3][2] == 0 && c[3][3] == 0)
                 || (c[1][1] == 0 && c[2][1] == 0 && c[3][1] == 0)) {
-            textView.setText("Game over. You win!");
+            textView.setText("You won!");
             gameOver = true;
         } else if ((c[1][1] == 1 && c[2][2] == 1 && c[3][3] == 1)
                 || (c[1][3] == 1 && c[2][2] == 1 && c[3][1] == 1)
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 || (c[2][1] == 1 && c[2][2] == 1 && c[2][3] == 1)
                 || (c[3][1] == 1 && c[3][2] == 1 && c[3][3] == 1)
                 || (c[1][1] == 1 && c[2][1] == 1 && c[3][1] == 1)) {
-            textView.setText("Game over. You lost!");
+            textView.setText("You lost!, Try Again!");
             gameOver = true;
         } else {
             boolean empty = false;
